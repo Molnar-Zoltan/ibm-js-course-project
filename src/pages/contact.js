@@ -7,7 +7,7 @@ export function Contact() {
         `
             <section class="flex flex-col xl:flex-row h-full justify-between px-10 ">
                 <div id="contact-text" class="flex flex-col gap-4 xl:w-150 justify-center xl:-mt-25">
-                    <h1 class="text-7xl font-bold">CONTACT US</h1>
+                    <h1 class="text-4xl xl:text-7xl font-bold">CONTACT US</h1>
                     <p class="text-lg">Get in touch</p>
                 </div>
                 <div id="contact-form" class="flex items-center justify-center">

@@ -4,7 +4,7 @@ export function Home() {
     return (
         `
             <section class="flex h-full justify-between px-10">
-                <div id="home-text" class="flex flex-col gap-4 w-150 justify-center -mt-25">
+                <div id="home-text" class="flex flex-col gap-4 w-50 xl:w-120 justify-center -mt-25">
                     <h1 class="text-4xl xl:text-7xl font-bold">EXPLORE DREAM DESTINATION</h1>
                     <p class="text-lg">
                         It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, 

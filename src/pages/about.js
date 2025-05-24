@@ -4,7 +4,7 @@ export function About() {
     return (
         `
             <section class="flex flex-col h-full xl:justify-between px-10">
-                <div id="about-header" class="flex flex-col gap-4 w-150 justify-center mt-5">
+                <div id="about-header" class="flex flex-col gap-4 justify-center mt-5">
                     <h1 class="text-4xl xl:text-7xl font-bold">ABOUT US</h1>
                 </div>
             
