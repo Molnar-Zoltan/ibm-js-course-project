@@ -2,7 +2,7 @@
 
 export function Sidebar() {
 
-    const iconSize = 1.5;
+    const iconSize = 2;
 
     const sidebarItems = [
         { 
@@ -45,7 +45,7 @@ export function Sidebar() {
     const sidebarList = sidebarItems.map(item => {
         return `
             <li>
-                <a href="${item.path}" class="hover:text-gray-400" title="${item.title}">
+                <a href="${item.path}" class="hover:text-gray-400 active:text-gray-400" title="${item.title}">
                     ${item.icon}
                 </a>
             </li>

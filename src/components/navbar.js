@@ -11,7 +11,7 @@ export function Navbar() {
     const navList = navItems.map(item => {
         return `
             <li>
-                <a href="${item.path}" data-navigo class="hover:text-red-600">${item.name}</a>
+                <a href="${item.path}" data-navigo class="hover:text-red-600 active:text-red-600">${item.name}</a>
             </li>
         `;
     }).join('');
@@ -19,7 +19,7 @@ export function Navbar() {
 
     return (
         `
-            <ul class="flex font-bold text-md gap-8">
+            <ul class="flex font-bold text-md xl:text-xl gap-8">
                 ${navList}
             </ul>
         `
