@@ -11,10 +11,10 @@ import Navigo from 'navigo'
 const root = document.getElementById('root');
 const navbar = document.getElementById('navbar');
 const sidebar = document.getElementById('sidebar');
+const submitButton = document.getElementById('submitButton');
 
 navbar.innerHTML = Navbar();
 sidebar.innerHTML = Sidebar();
-
 
 const router = new Navigo('/', { hash: false });
 
@@ -32,6 +32,4 @@ router.on({
 }).resolve();
 
 router.updatePageLinks();
-
-
 

@@ -53,7 +53,7 @@ export function Sidebar() {
     }).join('');
     return (
         `
-            <ul class="flex flex-col gap-3 items-center">
+            <ul class="flex flex-col gap-4 items-center">
                 ${sidebarList}
             </ul>
         `
