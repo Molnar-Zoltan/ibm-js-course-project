@@ -5,9 +5,9 @@ import { Contact } from './pages/contact.js'
 import { Navbar } from './components/navbar.js'
 import { Sidebar } from './components/sidebar.js'
 import { SearchBar } from './components/searchbar.js'
-
 import Navigo from 'navigo'
-
+import { categories } from './utils/categories.js'
+import { listRecommendations } from './utils/list-recommendations.js';
 
 const root = document.getElementById('root');
 const navbar = document.getElementById('navbar');
@@ -40,3 +40,34 @@ function loadPage(page, url) {
   root.innerHTML = page;
   searchbarContainer.innerHTML = url === '' ? SearchBar() : '';
 }
+
+const searchForm = document.getElementById("searchForm");
+searchForm && searchForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    let searchInputValue = document.getElementById("searchInput").value.toLowerCase().trim();
+    if (!searchInputValue) return;
+    let category = "";
+    
+    const isSearchValid = categories.some(c => {
+        category = c.toLowerCase();
+        searchInputValue === "country" && (searchInputValue = searchInputValue.slice(0, -1));
+        return category.startsWith(searchInputValue);
+    });
+    
+    if (isSearchValid) {
+        listRecommendations(category);
+    } else {
+        document.getElementById("search-results").innerHTML = `
+            <div class="text-center text-gray-100 bg-gray-500/30 rounded-lg p-6">
+                <p class="text-lg">No results found.</p>
+                <p class="text-sm">Please try a different search category.</p>
+            </div>
+        `;
+    }
+});
+
+
+const clearButton = document.getElementById("clearButton");
+clearButton && clearButton.addEventListener("click", function() {
+    document.getElementById("searchInput").value = "";
+});

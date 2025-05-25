@@ -3,7 +3,7 @@
 export function Home() {
     return (
         `
-            <section class="flex h-full justify-between px-10">
+            <section class="flex flex-col sm:flex-row h-full justify-center sm:justify-between px-10 pt-50 sm:pt-0">
                 <div id="home-text" class="flex flex-col gap-4 w-50 xl:w-120 justify-center -mt-25">
                     <h1 class="text-4xl xl:text-7xl font-bold">EXPLORE DREAM DESTINATION</h1>
                     <p class="text-lg">
@@ -14,7 +14,7 @@ export function Home() {
                         BOOK NOW
                     </button>
                 </div>
-                <div id="search-results" class="flex items-center justify-center">
+                <div id="search-results" class="flex flex-col gap-5 pt-10 z-2 pb-10 sm:pb-0">
                 </div>
             </section>
         `
