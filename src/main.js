@@ -13,12 +13,14 @@ const root = document.getElementById('root');
 const navbar = document.getElementById('navbar');
 const sidebar = document.getElementById('sidebar');
 const searchbarContainer = document.getElementById('searchbar');
-
+searchbarContainer.innerHTML = SearchBar();
 
 navbar.innerHTML = Navbar();
 sidebar.innerHTML = Sidebar();
 
-const router = new Navigo('/', { hash: false });
+//const router = new Navigo('/', { hash: false });
+const baseUrl = import.meta.env.BASE_URL;
+const router = new Navigo(baseUrl);
 
 
 router.on({
@@ -38,7 +40,11 @@ router.updatePageLinks();
 
 function loadPage(page, url) {
   root.innerHTML = page;
-  searchbarContainer.innerHTML = url === '' ? SearchBar() : '';
+
+  url !== '' 
+    ? searchbarContainer.firstElementChild.classList.add('hidden') 
+    : searchbarContainer.firstElementChild.classList.remove('hidden');
+
 }
 
 const searchForm = document.getElementById("searchForm");

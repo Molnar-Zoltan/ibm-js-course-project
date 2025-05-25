@@ -2,7 +2,9 @@
 
 export async function fetchDestinations() {
     try {
-        const response = await fetch('/src/data/travel_recommendation_api.json');
+        const baseUrl = import.meta.env.BASE_URL;
+        const apiLocation = '/data/travel_recommendation_api.json';
+        const response = await fetch(baseUrl + apiLocation);
 
         if (!response.ok) {
             throw new Error('Network response was not ok.');
@@ -11,6 +13,6 @@ export async function fetchDestinations() {
         return data;
     } catch (error) {
         console.error('Error fetching destinations:', error);
-        return [];
+        return null;
     }
 }
