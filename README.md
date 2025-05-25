@@ -4,3 +4,9 @@
 
 This project was created as part of the **IBM Back-End JavaScript Developer Professional Certificate**.  
 **Course:** JavaScript Programming Essentials.
+
+## 🛠️ Tech Stack:
+- HTML
+- Tailwind CSS
+- JavaScript
+- Navigo
